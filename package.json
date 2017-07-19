@@ -1,0 +1,44 @@
+{
+  "name": "serverless-aws-ci",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=4.0"
+  },
+  "description": "Serverless plugin that creates a CI pipeline using AWS CodePipeline and AWS CodeBuild.",
+  "main": "index.js",
+  "bin": {},
+  "scripts": {
+    "test": "node ./node_modules/istanbul/lib/cli.js cover _mocha -- -R spec && node ./node_modules/istanbul/lib/cli.js check-coverage --line 70 coverage/coverage.json",
+    "lint": "eslint index.js"
+  },
+  "author": "Matt Scifo <matt@scifo.info>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mscifo/serverless-aws-ci"
+  },
+  "keywords": [
+    "serverless plugin aws ci",
+    "serverless plugins",
+    "codebuild",
+    "codepipeline",
+    "aws",
+    "amazon",
+    "amazon web services",
+    "serverless.com"
+  ],    
+  "dependencies": {
+    "aws-sdk": "^2.84.0"
+  },
+  "devDependencies": {
+    "aws-sdk-mock": "^1.6.1",
+    "chai": "^3.5.0",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "istanbul": "^0.4.5",
+    "mocha": "^2.2.5"
+  }
+}
